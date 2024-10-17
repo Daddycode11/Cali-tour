@@ -615,3 +615,53 @@ button {
   display: flex;
   gap: 10px;
 }
+.text-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden;
+  color: white; /* Ensures text stands out */
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Make sure the image covers the entire area */
+  z-index: -1; /* Place the image behind the text */
+}
+.text-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire area */
+  z-index: -1; /* Place the image behind the text */
+}
+
+.tourist-header {
+  font-family: "Comic Sans MS", cursive; /* Apply the new font */
+  font-size: 36px; /* Set font size to 36px */
+  text-align: center;
+  max-width: 80%; /* Restrict the width for better readability */
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #16a03f; /* Coral/orange color */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Add some shadow for contrast */
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}

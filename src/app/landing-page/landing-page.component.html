@@ -103,26 +103,25 @@
 </div>
 <main>
   <div
-    class="header-container d-flex align-items-center justify-content-between p-6 bg-dark-green position-relative"
+    class="header-logo d-flex align-items-center justify-content-start gap-2 text-white"
   >
-    <div
-      class="header-logo d-flex align-items-center justify-content-start gap-2 text-white"
-    >
-      <img
-        src="../../assets/logo.png"
-        width="100px"
-        height="100px"
-        class="rounded-circle"
-      />
-
-      <h1 class="fw-bold fs-4 mt-1">
-        WEB - BASED COMMUNITY SUPPORT HUB FOR THE CULTURE AND TOURIST
-        DESTANATION
-      </h1>
-      <a class="btn btn-success ms-4" (click)="openLogin()">Login</a>
-      <a class="btn btn-primary ms-2" (click)="openRegister()">Register </a>
-    </div>
+    <img
+      src="../../assets/tourism logo.png"
+      width="100px"
+      height="100px"
+      class="rounded-circle"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maulie+Script&display=swap"
+      rel="stylesheet"
+    />
+    <h1 class="tourist-header text-center">
+      EXPLORE THE WONDERS OF THE CULTURE AND TOURIST DESTINATION CALINTAAN
+    </h1>
+    <a class="btn btn-success ms-4" (click)="openLogin()">Login</a>
+    <a class="btn btn-primary ms-2" (click)="openRegister()">Register </a>
   </div>
+
   <router-outlet></router-outlet>
 </main>
 <br />
