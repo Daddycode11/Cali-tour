@@ -1,9 +1,9 @@
 export const environment = {
-    "projectId":"cali-tour-web",
-    "appId":"1:416600848478:web:231d1e3e6aad051b455ccf",
-
-    "storageBucket":"cali-tour-web.appspot.com",
-    "apiKey":"AIzaSyCfRzRk_etGUCdnZbPm6WW36MJQWx0TTM4",
-    "authDomain":"cali-tour-web.firebaseapp.com",
-    "messagingSenderId":"416600848478"
+  apiKey: 'AIzaSyBDD06FCNbjCR9mTi6uYMZ282cFfsOeBoc',
+  authDomain: 'tour-app-dd25d.firebaseapp.com',
+  projectId: 'tour-app-dd25d',
+  storageBucket: 'tour-app-dd25d.firebasestorage.app',
+  messagingSenderId: '1035724415466',
+  appId: '1:1035724415466:web:f711fee6d5e99873b95293',
+  measurementId: 'G-B3R4VX9PK5',
 };

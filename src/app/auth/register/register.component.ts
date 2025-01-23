@@ -10,6 +10,8 @@ import { Users, UserType } from '../../../models/users';
 import { AuthService } from '../../services/auth.service';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { map, Observable } from 'rxjs';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-register',

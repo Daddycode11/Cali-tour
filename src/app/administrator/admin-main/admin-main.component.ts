@@ -17,9 +17,15 @@ import { CommonModule } from '@angular/common';
   styleUrl: './admin-main.component.css',
 })
 export class AdminMainComponent {
+navigateTo(arg0: string) {
+throw new Error('Method not implemented.');
+}
   toastr = inject(ToastrService);
   modalService = inject(NgbModal);
   products$: Observable<Products[]>;
+  materialProducts: any;
+  drinkProducts: any;
+  foodProducts: any;
   constructor(
     private authService: AuthService,
     private router: Router,

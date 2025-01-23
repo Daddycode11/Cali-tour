@@ -28,6 +28,7 @@ export class CreateBookingComponent implements OnInit {
   @Input() spot!: TouristSpot;
   bookingForm: FormGroup;
   totalAmount: number = 0;
+  isModalOpen: any;
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,

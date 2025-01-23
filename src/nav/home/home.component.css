@@ -1,6 +1,6 @@
-.header {
-  position: relative; /* Position relative for absolute positioning of children if needed */
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+/* Removed empty .header ruleset */
 
 .header-image {
   width: 100%; /* Full width */
@@ -339,4 +339,831 @@
   height: 100%;
   object-fit: cover; /* Ensures the image covers the entire header area */
   display: block;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url("../../assets/drone.JPG") no-repeat center center/cover;
+  position: relative;
+  height: 400px;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity here */
+  z-index: 0;
+}
+
+.tourist-header {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  font-size: 2.5rem;
+  z-index: 1;
+  padding: 20px 15px;
+}
+
+.image-card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 30px auto;
+  z-index: 1;
+  position: relative;
+}
+
+.image-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  max-width: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-card-img {
+  width: 100%;
+  height: auto;
+}
+
+.image-card-caption {
+  padding: 15px;
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+  color: #f8f8f8;
+  margin: 15px auto;
+  z-index: 1;
+  position: relative;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.category-card {
+  text-decoration: none;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1),
+    inset 0px 0px 10px var(--card-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2),
+    inset 0px 0px 15px var(--card-color);
+}
+
+.category-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+  border: 3px solid var(--card-color);
+  border-radius: 50%;
+}
+
+.category-card h5 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .category-card {
+    padding: 15px;
+  }
+
+  .category-card h5 {
+    font-size: 1rem;
+  }
+}
+/* Styling for the border around all cards */
+.border-wrapper {
+  border: 3px solid #ddd; /* Light border color */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Optional: Background for better contrast */
+  margin-top: 20px;
+}
+
+/* Existing styles */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.category-card {
+  text-decoration: none;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1),
+    inset 0px 0px 10px var(--card-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 15px rgba(2, 129, 87, 0.2),
+    inset 0px 0px 15px var(--card-color);
+}
+
+.category-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+  border: 3px solid var(--card-color);
+  border-radius: 50%;
+}
+
+.category-card h5 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .category-card {
+    padding: 15px;
+  }
+
+  .category-card h5 {
+    font-size: 1rem;
+  }
+}
+.section-border {
+  border: 2px solid #e0e0e0;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+/* Tour Activities Section */
+.section-border {
+  border-top: 2px solid #ddd;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1ba424;
+}
+
+.tour-activity-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tour-activity-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.activity-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #ddd;
+}
+
+.activity-info {
+  padding: 15px;
+}
+
+.rating-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.rating {
+  font-size: 18px;
+  font-weight: bold;
+  color: #f4b400;
+}
+
+.reviews {
+  font-size: 14px;
+  color: #777;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.best-seller {
+  background-color: #d9534f;
+}
+
+.must-try {
+  background-color: #5bc0de;
+}
+
+.activity-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.price-section {
+  margin-top: 15px;
+}
+
+.starting-price {
+  font-size: 16px;
+  color: #5cb85c;
+}
+
+.see-more {
+  background-color: #1ba424;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.see-more:hover {
+  background-color: #138f17;
+}
+.improved-text {
+  font-family: "Poppins", sans-serif; /* Modern and clean font */
+  font-size: 4rem; /* Large, bold text */
+  font-weight: 700; /* Bold text for emphasis */
+  color: #1ba424; /* Light green color */
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  letter-spacing: 2px; /* Spaced-out letters for a sleek look */
+  text-transform: uppercase; /* Converts text to uppercase */
+  background: linear-gradient(90deg, #1ba424, #0e7b1b); /* Gradient effect */
+  background-clip: text; /* Standard property for compatibility */
+  -webkit-background-clip: text; /* Clip gradient to text */
+  -webkit-text-fill-color: transparent; /* Makes gradient visible */
+  display: inline-block; /* Adjusts spacing around the text */
+  margin-top: 1rem; /* Adds breathing room */
+}
+/* Styling for the card container to center the button */
+.card-content {
+  display: flex;
+  flex-direction: column; /* Arranges children (text, button) in a column */
+  justify-content: center; /* Centers the items vertically */
+  align-items: center; /* Centers the items horizontally */
+  text-align: center; /* Centers the text inside */
+  padding: 20px; /* Adds padding around content */
+  height: 100%; /* Ensures the content fills the card container */
+}
+
+/* Optional: Card button styling (already provided) */
+.btn-success {
+  font-family: "Poppins", sans-serif; /* Modern sans-serif font for buttons */
+  background-color: #1ba424; /* Consistent green button background */
+  color: #fff; /* White text for good contrast */
+  font-size: 1rem; /* Slightly larger button font */
+  font-weight: 500; /* Slightly bold button text */
+  padding: 12px 24px; /* Adequate padding around button */
+  text-transform: uppercase; /* Uppercase for button text */
+  border-radius: 5px; /* Rounded button edges */
+  border: none; /* No border for cleaner look */
+  transition: background-color 0.3s ease-in-out; /* Smooth hover effect */
+  margin-top: 20px; /* Space above the button */
+}
+
+.btn-success:hover {
+  background-color: #155e20; /* Darker green on hover */
+  cursor: pointer; /* Changes cursor on hover */
+}
+/* Gallery Layout */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: #fff; /* Card background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Elevate the card on hover */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+  text-align: center; /* Center align the content */
+}
+
+.card-title {
+  font-family: "Showcard Gothic", sans-serif;
+  font-size: 25px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.card-description {
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.card-body p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%; /* Stack cards vertically on small screens */
+    max-width: 100%;
+  }
+
+  .card-title {
+    font-size: 22px; /* Smaller font size for mobile */
+  }
+
+  .card-description {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .card {
+    flex: 1 1 45%; /* Adjust to 2 columns on medium screens */
+  }
+}
+/* News Container */
+.news-container {
+  background-color: rgba(243, 247, 243, 0.23);
+
+  background-size: cover;
+  padding: 30px 0;
+}
+
+/* Headline */
+.headline {
+  color: #0b5577;
+  font-family: "Black North Demo", sans-serif;
+  font-size: 45px;
+}
+
+.headline-title {
+  font-size: 85px;
+}
+
+.headline-subtitle {
+  color: #000;
+  font-family: "Bellany", sans-serif;
+  font-size: 35px;
+}
+
+/* Image Styling */
+.news-image {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* News Content */
+.news-content {
+  padding-top: 30px;
+}
+
+.news-meta {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.news-text {
+  font-family: "Arial", sans-serif;
+}
+
+.news-text h5 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.news-text ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.news-text ul li {
+  font-size: 14px;
+  color: #333;
+}
+
+.read-more {
+  font-weight: bold;
+  color: green;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .headline {
+    font-size: 35px;
+  }
+
+  .headline-title {
+    font-size: 60px;
+  }
+
+  .headline-subtitle {
+    font-size: 30px;
+  }
+
+  .news-image {
+    width: 100%;
+  }
+
+  .news-text h5 {
+    font-size: 16px;
+  }
+
+  .news-text ul li {
+    font-size: 12px;
+  }
+
+  .read-more {
+    font-size: 14px;
+  }
+}
+/* Container Styling */
+.news-container {
+  background-color: rgba(243, 247, 243, 0.23);
+
+  background-size: cover;
+  padding: 50px 0;
+}
+
+/* Main Image Styling */
+.main-news-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Text Content Styling */
+.news-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.news-meta {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.news-text h5 {
+  color: #0b5577;
+  font-weight: bold;
+}
+
+.news-text ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.news-text p {
+  font-style: italic;
+  color: #333;
+}
+
+.read-more {
+  font-weight: bold;
+  color: green;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Carousel Image Styling */
+.carousel-image {
+  max-height: 150px; /* Adjust to desired size */
+  object-fit: cover;
+  border-radius: 10px;
+}
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #555;
+}
+.hero-image {
+  height: 90%;
+  width: 90%;
+  object-fit: cover;
+}
+@font-face {
+  font-family: "Coffee Healing";
+  src: url("/path/to/coffee-healing.woff2") format("woff2"),
+    url("/path/to/coffee-healing.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.card img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card-body {
+  padding: 10px;
+  font-family: "Campaign Sans Serif", sans-serif; /* Use the custom font */
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #04723f;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+.hero-image {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+.text-center h1 {
+  font-family: "Coffee Healing", sans-serif; /* Use the custom font */
+  font-size: 3.5rem; /* Adjust the font size as needed */
+  color: #04723f; /* Adjust the color as needed */
+}
+
+.text-center i {
+  font-size: 2.5rem; /* Adjust the icon size as needed */
+}
+.hero-image {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.text-center h1 {
+  font-family: "Coffee Healing", sans-serif; /* Use the custom font */
+  font-size: 3.5rem; /* Adjust the font size as needed */
+  color: #04723f; /* Adjust the color as needed */
+}
+
+.text-center i {
+  font-size: 2.5rem; /* Adjust the icon size as needed */
+}
+
+.card-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #04723f;
+}
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-prices {
+  margin-top: 10px;
+}
+
+.card-prices .badge {
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
+
+.btn-primary:hover {
+  background-color: #45a049;
+  border-color: #45a049;
+}
+
+.card-title {
+  font-size: 1.2rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+}
+
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+.event-images-container {
+  margin-top: 20px;
+}
+
+.event-image {
+  width: 100%; /* Ensures the image fits the column */
+  height: auto; /* Maintains aspect ratio */
+  border: 2px solid #ccc; /* Border for each image */
+  border-radius: 8px; /* Rounded corners for aesthetics */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-image:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+.explore-section {
+  text-align: center;
+  margin: 40px; /* Added more margin for better spacing */
+}
+
+.explore-title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem; /* Increased text size */
+  color: #16a71f; /* Text color remains green */
+  gap: 20px; /* Increased spacing between icon and text */
+  font-family: "Brisely", sans-serif;
+}
+
+.explore-title i {
+  font-size: 4rem; /* Increased icon size */
+  color: #000; /* Changed icon color to black */
+}
+
+.explore-section:hover .explore-title {
+  color: #128712; /* Slightly darker green on hover */
+}
+
+.explore-title i:hover {
+  transform: scale(1.1); /* Subtle hover effect for icon */
+  transition: transform 0.3s ease-in-out;
+}
+.brochure-card {
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card-header h1 {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+}
+
+.card-header p {
+  color: #666;
+  margin: 5px 0 0;
+}
+
+.card-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.card-item {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card-item:hover {
+  transform: translateY(-5px);
+}
+
+.card-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-item h2 {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.card-item p {
+  color: #666;
+  padding: 0 10px 10px;
+  font-size: 14px;
 }

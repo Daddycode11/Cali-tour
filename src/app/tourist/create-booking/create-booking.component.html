@@ -1,113 +1,128 @@
-<div class="modal-header">
-  <h6 class="modal-title">Booking Form</h6>
+<div
+  class="modal-header bg-success text-white d-flex justify-content-between align-items-center"
+>
+  <h6 class="modal-title fw-bold fs-4">Booking Form</h6>
   <button type="button" class="btn-close" aria-label="Close"></button>
 </div>
 
-<div class="modal-body">
+<div class="modal-body p-4" style="background-color: #f7f9fb">
   <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
-    <div class="mb-3">
-      <label for="destination" class="form-label">Destination</label>
+    <!-- Destination Field -->
+    <div class="mb-4">
+      <label for="destination" class="form-label fw-semibold"
+        >Destination</label
+      >
       <div class="input-group">
         <input
           type="text"
           id="destination"
           readonly
           formControlName="destination"
-          class="form-control"
+          class="form-control p-3 rounded-start"
         />
-        <span class="input-group-text"
-          ><i class="fas fa-map-marker-alt"></i
-        ></span>
+        <span class="input-group-text bg-success text-white rounded-end">
+          <i class="fas fa-map-marker-alt"></i>
+        </span>
       </div>
       <div
         *ngIf="
           bookingForm.get('destination')?.invalid &&
           bookingForm.get('destination')?.touched
         "
-        class="text-danger"
+        class="text-danger mt-1"
       >
         Destination is required.
       </div>
     </div>
 
-    <div class="mb-3">
-      <label for="price" class="form-label">Price Per Person</label>
+    <!-- Price Field -->
+    <div class="mb-4">
+      <label for="price" class="form-label fw-semibold">Price Per Person</label>
       <div class="input-group">
         <input
           type="number"
           readonly
           id="price"
           formControlName="price"
-          class="form-control"
+          class="form-control p-3 rounded-start"
         />
-        <span class="input-group-text">₱</span>
+        <span class="input-group-text bg-success text-white rounded-end"
+          >₱</span
+        >
       </div>
       <div
         *ngIf="
           bookingForm.get('price')?.invalid && bookingForm.get('price')?.touched
         "
-        class="text-danger"
+        class="text-danger mt-1"
       >
         Price is required and must be a positive number.
       </div>
     </div>
 
-    <div class="mb-3">
-      <label for="persons" class="form-label">Number of Persons</label>
+    <!-- Number of Persons Field -->
+    <div class="mb-4">
+      <label for="persons" class="form-label fw-semibold"
+        >Number of Persons</label
+      >
       <div class="input-group">
         <input
           type="number"
           id="persons"
           formControlName="persons"
-          class="form-control"
+          class="form-control p-3 rounded-start"
         />
-        <span class="input-group-text"
-          ><i class="fas fa-user-friends"></i
-        ></span>
+        <span class="input-group-text bg-success text-white rounded-end">
+          <i class="fas fa-user-friends"></i>
+        </span>
       </div>
       <div
         *ngIf="
           bookingForm.get('persons')?.invalid &&
           bookingForm.get('persons')?.touched
         "
-        class="text-danger"
+        class="text-danger mt-1"
       >
         Please enter a valid number of persons.
       </div>
     </div>
 
-    <div class="mb-3">
-      <label for="scheduledDate" class="form-label">Scheduled Date</label>
+    <!-- Scheduled Date Field -->
+    <div class="mb-4">
+      <label for="scheduledDate" class="form-label fw-semibold"
+        >Scheduled Date</label
+      >
       <div class="input-group">
         <input
           type="date"
           id="scheduledDate"
           formControlName="scheduledDate"
-          class="form-control"
+          class="form-control p-3 rounded-start"
         />
-        <span class="input-group-text"
-          ><i class="fas fa-calendar-alt"></i
-        ></span>
+        <span class="input-group-text bg-success text-white rounded-end">
+          <i class="fas fa-calendar-alt"></i>
+        </span>
       </div>
       <div
         *ngIf="
           bookingForm.get('scheduledDate')?.invalid &&
           bookingForm.get('scheduledDate')?.touched
         "
-        class="text-danger"
+        class="text-danger mt-1"
       >
         Please select a scheduled date.
       </div>
     </div>
 
-    <div class="d-flex align-items-center justify-content-between w-100 p-3">
-      <h5>Total Amount: ₱{{ totalAmount }}</h5>
+    <!-- Total Amount and Submit Button -->
+    <div class="d-flex align-items-center justify-content-between mt-4">
+      <h5 class="fw-bold">Total Amount: ₱{{ totalAmount }}</h5>
       <button
         type="submit"
-        class="btn btn-primary"
+        class="btn btn-success px-4 py-2 rounded-pill"
         [disabled]="bookingForm.invalid"
       >
-        Book Now
+        <i class="fas fa-paper-plane"></i> Book Now
       </button>
     </div>
   </form>

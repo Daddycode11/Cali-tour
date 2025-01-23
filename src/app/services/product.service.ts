@@ -10,6 +10,7 @@ import {
   updateDoc,
 } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { Products, productsConverter } from '../../models/products';
 import {
   deleteObject,
@@ -48,7 +49,7 @@ export class ProductService {
     const productDoc = doc(this.firestore, `products/${id}`).withConverter(
       productsConverter
     );
-    return docData(productDoc);
+    return docData(productDoc).pipe(map((data) => data as Products));
   }
 
   getAllProducts(): Observable<Products[]> {

@@ -1,1 +1,2 @@
 public/images/*.MP4 filter=lfs diff=lfs merge=lfs -text
+src/Assets/video_home.MP4 filter=lfs diff=lfs merge=lfs -text

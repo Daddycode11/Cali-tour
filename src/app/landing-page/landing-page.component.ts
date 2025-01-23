@@ -1,5 +1,4 @@
-import { Component, inject, OnDestroy, OnInit } from '@angular/core';
-
+import { Component, inject, OnInit, OnDestroy } from '@angular/core';
 import {
   Router,
   RouterLink,
@@ -16,7 +15,8 @@ import { LoginComponent } from '../auth/login/login.component';
 import { TouristHeaderComponent } from '../tourist/tourist-header/tourist-header.component';
 import { ToastrService } from 'ngx-toastr';
 import { CartService } from '../services/cart.service';
-import { Cart, CartWithProduct } from '../../models/cart';
+import { CartWithProduct } from '../../models/cart';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'app-landing-page',
@@ -29,43 +29,52 @@ import { Cart, CartWithProduct } from '../../models/cart';
     TouristHeaderComponent,
   ],
   templateUrl: './landing-page.component.html',
-  styleUrl: './landing-page.component.css',
+  styleUrls: ['./landing-page.component.css'],
 })
 export class LandingPageComponent implements OnInit, OnDestroy {
   modalService = inject(NgbModal);
-
-  users$: Users | null | undefined;
+  users$: Users | null = null;
   cart$: CartWithProduct[] = [];
   toastr = inject(ToastrService);
+
   constructor(
     private authService: AuthService,
     private router: Router,
     private cartService: CartService
-  ) {
-    this.authService.listenToUsers().subscribe((data: Users | null) => {
-      this.users$ = data;
+  ) {}
+  ngOnInit(): void {
+    // Listen to user state changes
+    this.authService.listenToUsers().subscribe((user: Users | null) => {
+      if (user) {
+        // Check if the user object is not null
+        this.users$ = user;
 
-      if (this.users$ !== null) {
+        // Check if the user is an Admin
         if (this.users$.type === UserType.ADMIN) {
-          console.log(this.users$.type === UserType.ADMIN);
-          this.router.navigate(['/administrator']);
+          console.log('User is an Admin');
+          this.router.navigate(['/administrator']); // Navigate to the admin page
         } else {
-          cartService.getAllMyCart(this.users$.id).subscribe((data) => {
-            this.cart$ = data;
-            console.log(data);
-          });
+          // If the user is not an admin, fetch their cart data
+          this.cartService
+            .getAllMyCart(this.users$.id)
+            .subscribe((cartData) => {
+              this.cart$ = cartData; // Store the cart data
+              console.log(cartData); // Log the cart data
+            });
         }
       }
     });
   }
 
-  openRegister() {
-    const modal = this.modalService.open(RegisterComponent);
+  openRegister(): void {
+    this.modalService.open(RegisterComponent);
   }
-  openLogin() {
-    const modal = this.modalService.open(LoginComponent);
+
+  openLogin(): void {
+    this.modalService.open(LoginComponent);
   }
-  logout() {
+
+  logout(): void {
     console.log('Logged out');
     this.authService
       .logout()
@@ -74,6 +83,8 @@ export class LandingPageComponent implements OnInit, OnDestroy {
         console.log(err);
       });
   }
-  ngOnInit(): void {}
-  ngOnDestroy(): void {}
+
+  ngOnDestroy(): void {
+    // Add cleanup logic if needed, such as unsubscribing from any observables
+  }
 }

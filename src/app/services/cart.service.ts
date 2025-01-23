@@ -16,6 +16,7 @@ import {
   updateDoc,
   where,
   writeBatch,
+  FieldValue,
 } from '@angular/fire/firestore';
 import { Products, productsConverter } from '../../models/products';
 export const CART_COLLECTION = 'carts';
@@ -35,18 +36,63 @@ export class CartService {
     const q = query(cartRef, where('userID', '==', userID));
 
     return collectionData(q).pipe(
-      mergeMap((carts: Cart[]) =>
-        from(carts).pipe(
-          mergeMap((cart: Cart) =>
-            from(getDoc(doc(productsRef, cart.productID))).pipe(
-              map((productDoc) => {
-                const product = productDoc.data() as Products;
-                return { cart, product };
-              })
-            )
-          ),
-          toArray()
-        )
+      mergeMap(
+        (
+          carts: Array<
+            | Cart
+            | {
+                id: string | FieldValue;
+                userID: string | FieldValue;
+                productID: string | FieldValue;
+                quantity: number | FieldValue;
+              }
+          >
+        ) =>
+          from(carts).pipe(
+            mergeMap((cart: Cart | { [key: string]: any }) => {
+              // Type assertion to ensure the cart is treated as a Cart type
+              const typedCart = cart as Cart;
+
+              return from(getDoc(doc(productsRef, typedCart.productID))).pipe(
+                map((productDoc) => {
+                  const product = productDoc.data() as Products;
+                  return {
+                    cart: {
+                      ...typedCart,
+                      id: typedCart.id ? typedCart.id.toString() : '',
+                      userID: typedCart.userID
+                        ? typedCart.userID.toString()
+                        : '',
+                      productID: typedCart.productID
+                        ? typedCart.productID.toString()
+                        : '',
+                      createdAt:
+                        typedCart.createdAt instanceof Date
+                          ? typedCart.createdAt
+                          : new Date(),
+                    },
+                    product: {
+                      ...product,
+                      id: product.id ? product.id.toString() : '',
+                      name: product.name ? product.name.toString() : '',
+                      description: product.description
+                        ? product.description.toString()
+                        : '',
+                      price: product.price ? product.price : 0,
+                      imageUrl: product.imageUrl
+                        ? product.imageUrl.toString()
+                        : '',
+                      category: product.category
+                        ? product.category.toString()
+                        : '',
+                      stock: product.stock ? product.stock : 0,
+                    },
+                  };
+                })
+              );
+            }),
+            toArray()
+          )
       )
     );
   }

@@ -38,7 +38,7 @@ export class AuthService {
     return signInWithEmailAndPassword(this.auth, email, password);
   }
 
-  listenToUsers() {
+  listenToUsers(): Observable<Users | null> {
     const users$ = user(this.auth);
 
     return users$.pipe(
@@ -48,7 +48,7 @@ export class AuthService {
             doc(this.firestore, USERS_COLLECTION, user.uid).withConverter(
               usersConverter
             )
-          );
+          ).pipe(map((userData) => (userData as Users) || null));
         } else {
           return of(null);
         }

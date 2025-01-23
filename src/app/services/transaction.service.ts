@@ -12,7 +12,7 @@ import {
   updateDoc,
   where,
 } from '@angular/fire/firestore';
-import { from, map, Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { Transactions, transactionsConverter } from '../../models/transaction';
 
 @Injectable({
@@ -21,8 +21,7 @@ import { Transactions, transactionsConverter } from '../../models/transaction';
 export class TransactionService {
   constructor(private firestore: Firestore) {}
 
-  //for admin to get all orders
-
+  // For admin to get all orders
   getAllTransactions(): Observable<Transactions[]> {
     const transactionsRef = collection(
       this.firestore,
@@ -35,7 +34,7 @@ export class TransactionService {
     );
   }
 
-  //for users to see his orders
+  // For users to see their orders
   getAllTransactionsByUsers(userID: string): Observable<Transactions[]> {
     const transactionsRef = collection(
       this.firestore,
@@ -48,16 +47,27 @@ export class TransactionService {
     );
   }
 
-  //to view transaction info
-  getTransactionById(transactionID: string): Observable<Transactions> {
+  // To view transaction info
+  getTransactionById(
+    transactionID: string
+  ): Observable<Transactions | undefined> {
     const transactionDocRef = doc(
       this.firestore,
       `transactions/${transactionID}`
     ).withConverter(transactionsConverter);
-    return docData(transactionDocRef);
+
+    return docData<Transactions>(transactionDocRef, { idField: 'id' }).pipe(
+      map((transactionData) => {
+        if (!transactionData) {
+          return undefined;
+        }
+        // Here, you can ensure that FieldValues are properly handled
+        return transactionData;
+      })
+    );
   }
 
-  //create transaction / order
+  // Create transaction / order
   addTransaction(transaction: Transactions): Promise<void> {
     const transactionDocRef = doc(
       collection(this.firestore, 'transactions'),
@@ -67,21 +77,23 @@ export class TransactionService {
     return setDoc(transactionDocRef, transaction);
   }
 
-  //update transation info / update order
+  // Update transaction info / update order
   updateTransaction(transaction: Transactions): Promise<void> {
     const transactionDocRef = doc(
       this.firestore,
       `transactions/${transaction.id}`
     ).withConverter(transactionsConverter);
+
     return updateDoc(transactionDocRef, { ...transaction });
   }
 
-  //delete order / for admin
+  // Delete order / for admin
   deleteTransaction(transactionID: string): Promise<void> {
     const transactionDocRef = doc(
       this.firestore,
       `transactions/${transactionID}`
     ).withConverter(transactionsConverter);
+
     return deleteDoc(transactionDocRef);
   }
 }

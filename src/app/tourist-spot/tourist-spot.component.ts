@@ -12,7 +12,7 @@ import { ToastrService } from 'ngx-toastr';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './tourist-spot.component.html',
-  styleUrl: './tourist-spot.component.css',
+  styleUrls: ['./tourist-spot.component.css'],
 })
 export class TouristSpotComponent {
   modalService = inject(NgbModal);

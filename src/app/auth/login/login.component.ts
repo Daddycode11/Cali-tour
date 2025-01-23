@@ -21,6 +21,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 export class LoginComponent {
   loginForm$: FormGroup;
   activeModal = inject(NgbActiveModal);
+  userForm$: any;
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
