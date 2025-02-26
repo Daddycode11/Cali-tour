@@ -19,47 +19,288 @@
     <!-- Card Group with Border -->
     <div class="card-group-container border-wrapper">
       <div class="row justify-content-center mt-4 gap-3">
-        <a
-          href="Hotel.html"
-          class="category-card col border-0 col-md-2 p-3 text-center text-black"
-          style="--card-color: rgba(226, 44, 44, 0.6)"
+        <!-- Clickable Card for Hotel and Accommodation -->
+        <div
+          class="category-card col border-0 col-md-2 p-3 text-center text-black animated-card"
+          style="--card-color: rgba(255, 193, 7, 0.6); cursor: pointer"
+          data-bs-toggle="modal"
+          data-bs-target="#hotelModal"
         >
           <img
             src="../../assets/hotels.png"
             class="category-icon"
-            alt="Hotels & Accommodation"
+            alt="Hotel and Accommodation"
           />
-          <h5>Hotels & Accommodation</h5>
-        </a>
+          <h5 class="fw-bold mt-2">
+            <i class="fas fa-hotel text-primary me-2"></i> Hotel & Accommodation
+          </h5>
+        </div>
 
+        <!-- Modal -->
+        <div
+          class="modal fade animated-modal"
+          id="hotelModal"
+          tabindex="-1"
+          aria-labelledby="hotelModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+              <!-- Modal Header -->
+              <div class="modal-header custom-header">
+                <h5 class="modal-title" id="hotelModalLabel">
+                  <i class="fas fa-bed me-2"></i> Hotel & Accommodation in
+                  Calintaan
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close btn-close-white"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+
+              <!-- Modal Body -->
+              <div class="modal-body">
+                <ul class="hotel-list">
+                  <li class="animated-list">
+                    <i class="fas fa-building text-warning me-2"></i> Jackson
+                    Hotel
+                  </li>
+                  <li class="animated-list">
+                    <i class="fas fa-umbrella-beach text-info me-2"></i> Holiday
+                    Ocean Resort
+                  </li>
+                  <li class="animated-list">
+                    <i class="fas fa-mountain text-success me-2"></i> Labros
+                    Ridge and Waterfront
+                  </li>
+                  <li class="animated-list">
+                    <i class="fas fa-water text-primary me-2"></i> Ragara Beach
+                    Resort
+                  </li>
+                  <li class="animated-list">
+                    <i class="fas fa-tree text-brown me-2"></i> Bihag Hills
+                    Resort
+                  </li>
+                  <li class="animated-list">
+                    <i class="fas fa-swimmer text-blue me-2"></i> Cali Club
+                    Resort
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Footer with Logo -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Category Card (Keeps your current design) -->
         <div
           class="category-card col border-0 col-md-2 p-3 text-center text-black"
-          style="--card-color: rgba(23, 172, 209, 0.6)"
+          style="--card-color: rgba(23, 172, 209, 0.6); cursor: pointer"
+          data-bs-toggle="modal"
+          data-bs-target="#thingsToDoModal"
         >
           <img
             src="../../assets/Things to do.png"
             class="category-icon"
             alt="Things To Do"
           />
-          <h5>Things To Do</h5>
+          <h5 class="fw-bold mt-2">Things To Do</h5>
+        </div>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="thingsToDoModal"
+          tabindex="-1"
+          aria-labelledby="thingsToDoModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded shadow-lg border-0 animate-modal">
+              <!-- Modal Header -->
+              <div
+                class="modal-header text-white text-center love-philippines-header"
+              >
+                <div
+                  class="d-flex align-items-center w-100 justify-content-center"
+                >
+                  <h5 class="modal-title fw-bold" id="thingsToDoModalLabel">
+                    <i class="fas fa-map-marked-alt me-2"></i> THINGS TO DO IN
+                    CALINTAAN
+                  </h5>
+                </div>
+                <button
+                  type="button"
+                  class="btn-close btn-close-white"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+
+              <!-- Modal Body -->
+              <div class="modal-body p-4">
+                <ul class="list-unstyled text-start">
+                  <li class="py-2 d-flex align-items-center">
+                    <i class="fas fa-hiking text-success me-2 animate-icon"></i>
+                    <span class="fw-semibold">Trekking at Mts. Iglit-Baco</span>
+                  </li>
+                  <li class="py-2 d-flex align-items-center">
+                    <i class="fas fa-water text-primary me-2 animate-icon"></i>
+                    <span class="fw-semibold">Snorkeling</span>
+                  </li>
+                  <li class="py-2 d-flex align-items-center">
+                    <i class="fas fa-ship text-info me-2 animate-icon"></i>
+                    <span class="fw-semibold">Island Hopping</span>
+                  </li>
+                  <li class="py-2 d-flex align-items-center">
+                    <i
+                      class="fas fa-seedling text-success me-2 animate-icon"
+                    ></i>
+                    <span class="fw-semibold">Mangrove Planting</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Logo Under Content -->
+              <div class="text-center my-3">
+                <img
+                  src="../../assets/love-philippines-logo.png.png"
+                  alt="Love Philippines Logo"
+                  class="love-philippines-footer-logo"
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
-        <a
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+          function shareActivity() {
+            const shareText = "Check out these activities at Mts. Iglit-Baco!";
+            if (navigator.share) {
+              navigator
+                .share({
+                  title: "Things To Do",
+                  text: shareText,
+                  url: window.location.href,
+                })
+                .catch((err) => console.log("Error sharing", err));
+            } else {
+              alert("Sharing not supported in this browser.");
+            }
+          }
+        </script>
+        <!-- Clickable Card for Restaurants -->
+        <div
           class="category-card col border-0 col-md-2 p-3 text-center text-black"
-          style="--card-color: rgba(196, 184, 21, 0.6)"
+          style="--card-color: rgba(23, 172, 209, 0.6); cursor: pointer"
+          data-bs-toggle="modal"
+          data-bs-target="#restaurantModal"
         >
           <img
             src="../../assets/Restaurant.png"
             class="category-icon"
-            alt="Restaurant"
+            alt="Restaurants"
           />
-          <h5>Restaurant</h5>
-        </a>
+          <h5 class="fw-bold mt-2">
+            <i class="fas fa-utensils text-danger me-2"></i> Restaurants
+          </h5>
+        </div>
 
+        <!-- Restaurant Modal -->
+        <div
+          class="modal fade"
+          id="restaurantModal"
+          tabindex="-1"
+          aria-labelledby="restaurantModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded shadow-lg border-0 animate-modal">
+              <!-- Modal Header -->
+              <div
+                class="modal-header text-white text-center love-philippines-header"
+              >
+                <div
+                  class="d-flex align-items-center w-100 justify-content-center"
+                >
+                  <h5 class="modal-title fw-bold" id="restaurantModalLabel">
+                    <i class="fas fa-utensils me-2"></i> Popular Restaurants in
+                    Calintaan
+                  </h5>
+                </div>
+                <button
+                  type="button"
+                  class="btn-close btn-close-white"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+
+              <!-- Modal Body -->
+              <div class="modal-body p-4">
+                <ul class="list-unstyled text-start">
+                  <li class="py-2 d-flex align-items-center">
+                    <i
+                      class="fas fa-drumstick-bite text-danger me-2 animate-icon"
+                    ></i>
+                    <span class="fw-semibold"
+                      >Nors Chicken House (Jackson Restaurant)</span
+                    >
+                  </li>
+                  <li class="py-2 d-flex align-items-center">
+                    <i class="fas fa-fish text-primary me-2 animate-icon"></i>
+                    <span class="fw-semibold"
+                      >Mangyan Grill and Restaurant</span
+                    >
+                  </li>
+                  <li class="py-2 d-flex align-items-center">
+                    <i
+                      class="fas fa-pizza-slice text-warning me-2 animate-icon"
+                    ></i>
+                    <span class="fw-semibold">Centro Food House</span>
+                  </li>
+                  <li class="py-2 d-flex align-items-center">
+                    <i class="fas fa-coffee text-brown me-2 animate-icon"></i>
+                    <span class="fw-semibold">Kakusinero Food Corner Café</span>
+                  </li>
+                  <li class="py-2 d-flex align-items-center">
+                    <i
+                      class="fas fa-utensils text-success me-2 animate-icon"
+                    ></i>
+                    <span class="fw-semibold">Kuya J Redrock Cuisine</span>
+                  </li>
+                  <li class="py-2 d-flex align-items-center">
+                    <i
+                      class="fas fa-hamburger text-orange me-2 animate-icon"
+                    ></i>
+                    <span class="fw-semibold">Shemen Food Hauz</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- FontAwesome & Bootstrap -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Easy Booking Card -->
         <a
-          (click)="navigateTo('tourist-spot')"
           class="category-card col border-0 col-md-2 p-3 text-center text-black"
-          style="--card-color: rgba(204, 16, 132, 0.6)"
+          style="--card-color: rgba(204, 16, 132, 0.6); cursor: pointer"
+          data-bs-toggle="modal"
+          data-bs-target="#bookingModal"
         >
           <img
             src="../../assets/Easy Booking.png"
@@ -69,727 +310,1018 @@
           <h5>Easy Booking</h5>
         </a>
 
+        <!-- Booking Modal -->
         <div
-          class="category-card col border-0 col-md-2 p-3 text-center text-black"
-          style="--card-color: rgba(8, 92, 202, 0.6)"
+          class="modal fade"
+          id="bookingModal"
+          tabindex="-1"
+          aria-labelledby="bookingModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content shadow-lg border-0 rounded-4">
+              <!-- 🎨 Updated Header Color -->
+              <div class="modal-header text-white" style="background: #007bff">
+                <h5 class="modal-title fw-bold" id="bookingModalLabel">
+                  📍 Book a Stay or Tour
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close btn-close-white"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body p-4">
+                <form>
+                  <!-- Category Selection -->
+                  <div class="mb-3">
+                    <label for="bookingCategory" class="form-label fw-semibold"
+                      >🛎️ Select Category</label
+                    >
+                    <select
+                      class="form-select rounded-3 shadow-sm"
+                      id="bookingCategory"
+                      onchange="toggleBookingOptions()"
+                    >
+                      <option value="tourist">Tourist Spot</option>
+                      <option value="hotel">Hotel & Accommodation</option>
+                    </select>
+                  </div>
+
+                  <!-- Tourist Spot Dropdown -->
+                  <div class="mb-3" id="touristSpotSection">
+                    <label for="touristSpot" class="form-label fw-semibold"
+                      >🌍 Select a Tourist Spot & Hotel & Accommodation</label
+                    >
+                    <select
+                      class="form-select rounded-3 shadow-sm"
+                      id="touristSpot"
+                    >
+                      <option>MTS. IGLIT-BACO NATURAL PARK</option>
+                      <option>BATO TABAO FISH SANCTUARY</option>
+                      <option>LULI ISLAND</option>
+                      <option>MARSUMBOL RESERVOIR</option>
+                      <option>WAWA MANGROVE</option>
+                      <option>MAKATIKLAS FALLS</option>
+                      <option>SALUGSOG FALLS</option>
+                      <option>GREEN HILLS</option>
+                      <option>ANAHAWIN RIVER</option>
+                      <option>MEDALLA PARK</option>
+                      <option>SAINT MICHAEL PARISH CHURCH</option>
+                      <option>OLD BELL TOWER</option>
+                      <option>QUEEN’S RANCH GROTTO</option>
+                      <option>Jackson Hotel</option>
+                      <option>Holiday Ocean Resort</option>
+                      <option>Labros Ridge and Waterfront</option>
+                      <option>Ragara Beach Resort</option>
+                      <option>Bihag Hills Resort</option>
+                      <option>Cali Club Resort</option>
+                    </select>
+                  </div>
+
+                  <!-- Hotel & Accommodation Dropdown (Initially Hidden) -->
+                  <div class="mb-3" id="hotelSection" style="display: none">
+                    <label for="hotelSelection" class="form-label fw-semibold"
+                      >🏨 Select a Hotel</label
+                    >
+                    <select
+                      class="form-select rounded-3 shadow-sm"
+                      id="hotelSelection"
+                    >
+                      <option>Jackson Hotel</option>
+                      <option>Holiday Ocean Resort</option>
+                      <option>Labros Ridge and Waterfront</option>
+                      <option>Ragara Beach Resort</option>
+                      <option>Bihag Hills Resort</option>
+                      <option>Cali Club Resort</option>
+                    </select>
+                  </div>
+
+                  <!-- Booking Details -->
+                  <div class="mb-3">
+                    <label for="bookingDate" class="form-label fw-semibold"
+                      >📅 Select Date</label
+                    >
+                    <input
+                      type="date"
+                      class="form-control rounded-3 shadow-sm"
+                      id="bookingDate"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="guestCount" class="form-label fw-semibold"
+                      >👥 Number of Guests</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control rounded-3 shadow-sm"
+                      id="guestCount"
+                      min="1"
+                      max="50"
+                    />
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer d-flex justify-content-between">
+                <button
+                  type="button"
+                  class="btn btn-secondary rounded-pill px-4 py-2 shadow-sm"
+                  data-bs-dismiss="modal"
+                >
+                  ❌ Cancel
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-success rounded-pill px-4 py-2 shadow-sm"
+                >
+                  ✅ Confirm Booking
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          function toggleBookingOptions() {
+            let category = document.getElementById("bookingCategory").value;
+            let touristSpotSection =
+              document.getElementById("touristSpotSection");
+            let hotelSection = document.getElementById("hotelSection");
+
+            if (category === "tourist") {
+              touristSpotSection.style.display = "block";
+              hotelSection.style.display = "none";
+            } else {
+              touristSpotSection.style.display = "none";
+              hotelSection.style.display = "block";
+            }
+          }
+        </script>
+
+        <!-- Clickable Card for Tours & Attractions -->
+        <div
+          class="category-card col border-0 col-md-2 p-3 text-center text-black animated-card"
+          style="--card-color: rgba(72, 138, 199, 0.6); cursor: pointer"
+          data-bs-toggle="modal"
+          data-bs-target="#toursModal"
         >
           <img
-            src="../../assets/Tour icon.png"
-            class="category-icon"
-            alt="Tours"
+            src="../../assets/tours.png"
+            class="category-icon animated-gif"
+            alt="Tours & Attractions"
           />
-          <h5>Tours</h5>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div
-  class="row justify-content-center align-items-center"
-  style="
-    background-color: rgba(243, 247, 243, 0.23);
-    background-image: url('assets/img/gallery/municipality bg.png');
-    background-size: cover;
-  "
->
-  <div class="col-lg-7 text-center mb-6">
-    <span
-      style="
-        color: #1ba424;
-        font-family: 'Crotah free version', BCrotah free version;
-        font-size: 45px;
-      "
-      class="fadeIn"
-    >
-      <span style="font-size: 70px">A</span><b>bout Calintaan</b>
-    </span>
-    <span class="text-1200 fs--1 fw-normal"></span>
-    <!-- Image 1 -->
-    <img
-      src="../../assets/LGU.png"
-      alt="Your Image"
-      style="display: block; margin: 10px auto; max-width: 100%; height: auto"
-    />
-  </div>
-  <div class="col-lg-5 text-center">
-    <!-- Image 2 -->
-    <img
-      src="../../assets/gewan 2 png.png"
-      alt="Your Second Image"
-      style="display: block; margin-top: 10px; width: 100%; height: auto"
-    />
-    <!-- Text below Image 2 -->
-    <div
-      style="
-        margin-top: 8px;
-        font-family: 'Comic Sans MS', sans-serif;
-        text-align: justify;
-      "
-    >
-      <p style="color: black">
-        Calintaan is a municipality in the province of Occidental Mindoro,
-        Philippines. It is located on the western side of Mindoro Island, facing
-        the South China Sea. The municipality is known for its coastal areas,
-        agriculture, and fishing industries. Like many municipalities in the
-        Philippines, Calintaan has its own local government unit responsible for
-        providing basic services and governance to its residents.
-      </p>
-      <!-- Learn More Button -->
-      <a href="#" class="btn btn-success">Learn More</a>
-    </div>
-    <div></div>
-  </div>
-
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-  />
-
-  <div class="explore-section">
-    <h1 class="explore-title">
-      <i class="fas fa-search"></i> Explore Calintaan
-    </h1>
-  </div>
-  <div class="brochure-card">
-    <div class="card-header">
-      <h1>Explore Destinations</h1>
-      <p>Your guide to amazing places</p>
-    </div>
-    <div class="card-content">
-      <div class="card-item" *ngFor="let item of cardItems">
-        <img [src]="item.image" alt="Placeholder" />
-        <h2>{{ item.title }}</h2>
-        <p>{{ item.description }}</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="news-container">
-    <div class="row justify-content-center align-items-center news-section">
-      <div class="col-lg-7 text-center mb-6">
-        <h2 class="headline fadeIn">
-          <span class="headline-title">Featured News and Articles</span>
-          <span class="headline-subtitle">Binibining Calintaan 2024</span>
-        </h2>
-
-        <img
-          src="../../assets/miss calintaan 2020 new.png"
-          alt="Miss Calintaan 2020"
-          class="news-image"
-        />
-      </div>
-
-      <div class="col-lg-5 text-left news-content">
-        <a href="Miss corronation2024.html" class="btn btn-success"
-          >Binibining Calintaan 2024 Coronation Night</a
-        >
-
-        <div class="news-meta">MAR 18, 2024 | NEWS, ADVISORIES, FEATURED</div>
-
-        <div class="news-text">
-          <h5>
-            Congratulations to the radiant winners of Miss Calintaan 2024!
+          <h5 class="fw-bold mt-2 text-center">
+            <i class="fas fa-map-marked-alt text-success me-2"></i> Tours &
+            Attractions
           </h5>
-          <ul>
-            <li>Miss CALINTAAN: Miss Charlene Kaye Zamora Gonzales</li>
-            <li>1st Runner-up: Miss Pranz Charlene T. Zamora</li>
-            <li>2nd Runner-up: Miss Nicole Angela D. Trambulo</li>
-          </ul>
+        </div>
 
-          <h5>Consolation</h5>
-          <ul>
-            <li>Miss Golden: Shaune Andrea P. Caleze</li>
-            <li>Miss Jenny Rose M. Batal</li>
-            <li>Miss Shantaine G. Dingle</li>
-            <li>Miss Lyka A. Domingo</li>
-          </ul>
+        <!-- Modal for Tours & Attractions -->
+        <div
+          class="modal fade animated-modal"
+          id="toursModal"
+          tabindex="-1"
+          aria-labelledby="toursModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+              <!-- Modal Header -->
+              <div class="modal-header custom-header">
+                <h5 class="modal-title text-center" id="toursModalLabel">
+                  <i class="fas fa-globe text-primary me-2"></i> Tours &
+                  Attractions
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close btn-close-white"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
 
-          <p>#GewanSaCalintaan #AbanteBagongCalintaan #CalintaanAngGaling</p>
+              <!-- Modal Body -->
+              <div class="modal-body">
+                <ul class="tours-list">
+                  <li class="animated-list">
+                    <i class="fas fa-mountain text-success me-2"></i> Mts.
+                    Iglit-Baco Natural Park
+                  </li>
+                  <li class="animated-list">
+                    <i class="fas fa-fish text-primary me-2"></i> Bato Tabao
+                    Fish Sanctuary
+                  </li>
+                  <li class="animated-list">
+                    <i class="fas fa-water text-info me-2"></i> Luli Island
+                  </li>
+                  <li class="animated-list">
+                    <i class="fas fa-seedling text-green me-2"></i> Marsumbol
+                    Reservoir
+                  </li>
+                  <li class="animated-list">
+                    <i class="fas fa-tree text-brown me-2"></i> Wawa Mangrove
+                  </li>
+                  <li class="animated-list">
+                    <i class="fas fa-waterfall text-blue me-2"></i> Makatiklas
+                    Falls
+                  </li>
+                  <li class="animated-list">
+                    <i class="fas fa-waterfall text-cyan me-2"></i> Salugsog
+                    Falls
+                  </li>
+                  <li class="animated-list">
+                    <i class="fas fa-mountain text-warning me-2"></i> Green
+                    Hills
+                  </li>
+                  <li class="animated-list">
+                    <i class="fas fa-water text-lightblue me-2"></i> Anahawin
+                    River
+                  </li>
+                  <li class="animated-list">
+                    <i class="fas fa-tree-city text-green me-2"></i> Medalla
+                    Park
+                  </li>
+                  <li class="animated-list">
+                    <i class="fas fa-church text-secondary me-2"></i> Saint
+                    Michael Parish Church
+                  </li>
+                  <li class="animated-list">
+                    <i class="fas fa-bell text-dark me-2"></i> Old Bell Tower
+                  </li>
+                  <li class="animated-list">
+                    <i class="fas fa-gopuram text-purple me-2"></i> Queen’s
+                    Ranch Grotto
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
-          <a href="Miss corronation2024.html" class="read-more">Read More</a>
+        <div
+          class="row justify-content-center align-items-center"
+          style="
+            background-color: rgba(243, 247, 243, 0.23);
+            background-image: url('assets/img/gallery/municipality bg.png');
+            background-size: cover;
+          "
+        >
+          <div class="col-lg-7 text-center mb-6">
+            <span
+              style="
+                color: #1ba424;
+                font-family: 'Crotah free version', BCrotah free version;
+                font-size: 45px;
+              "
+              class="fadeIn"
+            >
+              <span style="font-size: 70px">A</span><b>bout Calintaan</b>
+            </span>
+            <span class="text-1200 fs--1 fw-normal"></span>
+            <!-- Image 1 -->
+            <img
+              src="../../assets/LGU.png"
+              alt="Your Image"
+              style="
+                display: block;
+                margin: 10px auto;
+                max-width: 100%;
+                height: auto;
+              "
+            />
+          </div>
+          <div class="col-lg-5 text-center">
+            <!-- Image 2 -->
+            <img
+              src="../../assets/gewan 2 png.png"
+              alt="Your Second Image"
+              style="
+                display: block;
+                margin-top: 10px;
+                width: 100%;
+                height: auto;
+              "
+            />
+            <!-- Text below Image 2 -->
+            <div
+              style="
+                margin-top: 8px;
+                font-family: 'Comic Sans MS', sans-serif;
+                text-align: justify;
+              "
+            >
+              <p style="color: black">
+                Calintaan is a municipality in the province of Occidental
+                Mindoro, Philippines. It is located on the western side of
+                Mindoro Island, facing the South China Sea. The municipality is
+                known for its coastal areas, agriculture, and fishing
+                industries. Like many municipalities in the Philippines,
+                Calintaan has its own local government unit responsible for
+                providing basic services and governance to its residents.
+              </p>
+              <!-- Learn More Button -->
+              <a href="#" class="btn btn-success">Learn More</a>
+            </div>
+            <div></div>
+          </div>
+
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+          />
+
+          <div class="explore-section">
+            <h1 class="explore-title">
+              <i class="fas fa-search"></i> Explore Calintaan
+            </h1>
+          </div>
+          <div class="brochure-card">
+            <div class="card-header">
+              <h1>Explore Destinations</h1>
+              <p>Your guide to amazing places</p>
+            </div>
+            <div class="card-content">
+              <div class="card-item" *ngFor="let item of cardItems">
+                <img [src]="item.image" alt="Placeholder" />
+                <h2>{{ item.title }}</h2>
+                <p>{{ item.description }}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="news-container">
+            <div
+              class="row justify-content-center align-items-center news-section"
+            >
+              <div class="col-lg-7 text-center mb-6">
+                <h2 class="headline fadeIn">
+                  <span class="headline-title">Featured News and Articles</span>
+                  <span class="headline-subtitle"
+                    >Binibining Calintaan 2024</span
+                  >
+                </h2>
+
+                <img
+                  src="../../assets/miss calintaan 2020 new.png"
+                  alt="Miss Calintaan 2020"
+                  class="news-image"
+                />
+              </div>
+
+              <div class="col-lg-5 text-left news-content">
+                <a href="Miss corronation2024.html" class="btn btn-success"
+                  >Binibining Calintaan 2024 Coronation Night</a
+                >
+
+                <div class="news-meta">
+                  MAR 18, 2024 | NEWS, ADVISORIES, FEATURED
+                </div>
+
+                <div class="news-text">
+                  <h5>
+                    Congratulations to the radiant winners of Miss Calintaan
+                    2024!
+                  </h5>
+                  <ul>
+                    <li>Miss CALINTAAN: Miss Charlene Kaye Zamora Gonzales</li>
+                    <li>1st Runner-up: Miss Pranz Charlene T. Zamora</li>
+                    <li>2nd Runner-up: Miss Nicole Angela D. Trambulo</li>
+                  </ul>
+
+                  <h5>Consolation</h5>
+                  <ul>
+                    <li>Miss Golden: Shaune Andrea P. Caleze</li>
+                    <li>Miss Jenny Rose M. Batal</li>
+                    <li>Miss Shantaine G. Dingle</li>
+                    <li>Miss Lyka A. Domingo</li>
+                  </ul>
+
+                  <p>
+                    #GewanSaCalintaan #AbanteBagongCalintaan #CalintaanAngGaling
+                  </p>
+
+                  <a href="Miss corronation2024.html" class="read-more"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <h1 class="explore-title">sample random pictures</h1>
+          <!-- Add a row with 6 images -->
+          <div class="event-images-container text-center mt-5">
+            <div class="row justify-content-center">
+              <div class="col-lg-2 col-md-2 col-sm-4 mb-3">
+                <img
+                  src="../../assets/miss tourism.JPG"
+                  alt="Event 1"
+                  class="event-image"
+                />
+              </div>
+              <div class="col-lg-2 col-md-2 col-sm-4 mb-3">
+                <img
+                  src="../../assets/miss tourism.JPG"
+                  alt="Event 2"
+                  class="event-image"
+                />
+              </div>
+              <div class="col-lg-2 col-md-2 col-sm-4 mb-3">
+                <img
+                  src="../../assets/miss tourism.JPG"
+                  alt="Event 3"
+                  class="event-image"
+                />
+              </div>
+              <div class="col-lg-2 col-md-2 col-sm-4 mb-3">
+                <img
+                  src="../../assets/miss tourism.JPG"
+                  alt="Event 4"
+                  class="event-image"
+                />
+              </div>
+              <div class="col-lg-2 col-md-2 col-sm-4 mb-3">
+                <img
+                  src="../../assets/miss tourism.JPG"
+                  alt="Event 5"
+                  class="event-image"
+                />
+              </div>
+              <div class="col-lg-2 col-md-2 col-sm-4 mb-3">
+                <img
+                  src="../../assets/miss tourism.JPG"
+                  alt="Event 6"
+                  class="event-image"
+                />
+              </div>
+            </div>
+          </div>
+
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <h1 class="explore-title">Our products</h1>
+          <section class="py-4 bg-light">
+            <div class="container">
+              <div class="row gy-4">
+                <!-- Turmeric Brew Card -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="card h-100 shadow-sm border-0">
+                    <a href="../../assets/hero-section-2.png" target="_blank">
+                      <img
+                        class="card-img-top rounded-top"
+                        src=""
+                        alt="Turmeric Brew"
+                      />
+                    </a>
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Turmeric Brew</h5>
+                      <p class="card-text text-muted small">
+                        A healthy and aromatic beverage with a warm, earthy
+                        flavor.
+                      </p>
+                      <div class="card-prices">
+                        <span class="badge bg-success me-2">300g: ₱180.00</span>
+                        <span class="badge bg-success">200g: ₱140.00</span>
+                      </div>
+                      <button class="btn btn-warning mt-3 btn-sm w-100">
+                        Add to Wishlist
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Ginger Brew Card -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="card h-100 shadow-sm border-0">
+                    <a href="../../assets/tabao.JPG" target="_blank">
+                      <img
+                        class="card-img-top rounded-top"
+                        src=""
+                        alt="Ginger Brew"
+                      />
+                    </a>
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Ginger Brew</h5>
+                      <p class="card-text text-muted small">
+                        A warm, zesty beverage for wellness enthusiasts.
+                      </p>
+                      <div class="card-prices">
+                        <span class="badge bg-success me-2">300g: ₱180.00</span>
+                        <span class="badge bg-success">200g: ₱140.00</span>
+                      </div>
+                      <button class="btn btn-warning mt-3 btn-sm w-100">
+                        Add to Wishlist
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Pure Ginger Card -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="card h-100 shadow-sm border-0">
+                    <a href="../../assets/pure ginger.jpg" target="_blank">
+                      <img
+                        class="card-img-top rounded-top"
+                        src=""
+                        alt="Pure Ginger"
+                      />
+                    </a>
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Pure Ginger</h5>
+                      <p class="card-text text-muted small">
+                        A healthy and aromatic spice offering a warm, zesty
+                        flavor.
+                      </p>
+                      <div class="card-prices">
+                        <span class="badge bg-success">₱140.00</span>
+                      </div>
+                      <button class="btn btn-warning mt-3 btn-sm w-100">
+                        Add to Wishlist
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Masini Wine Card -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="card h-100 shadow-sm border-0">
+                    <a href="../../assets/makatiklas.jpg" target="_blank">
+                      <img
+                        class="card-img-top rounded-top"
+                        src=""
+                        alt="Masini Wine"
+                      />
+                    </a>
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Masini Wine</h5>
+                      <p class="card-text text-muted small">
+                        A hidden gem in Calintaan.
+                      </p>
+                      <div class="card-prices">
+                        <span class="badge bg-success me-2"
+                          >750ml: ₱600.00</span
+                        >
+                        <span class="badge bg-success">375ml: ₱375.00</span>
+                      </div>
+                      <button class="btn btn-warning mt-3 btn-sm w-100">
+                        Add to Wishlist
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Pastilias Card -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="card h-100 shadow-sm border-0">
+                    <a href="../../assets/pastilias.jpg" target="_blank">
+                      <img
+                        class="card-img-top rounded-top"
+                        src="../../assets/pastilias.jpg"
+                        alt="Pastilias"
+                      />
+                    </a>
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Pastilias</h5>
+                      <p class="card-text text-muted small">Products of jam.</p>
+                      <div class="card-prices">
+                        <span class="badge bg-success">₱120.00</span>
+                      </div>
+                      <button class="btn btn-successmt-3 btn-sm w-100">
+                        see more
+                      </button>
+                      <button class="btn btn-warning mt-3 btn-sm w-100">
+                        Add to Wishlist
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Jam Card -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="card h-100 shadow-sm border-0">
+                    <a href="../../assets/jam.jpg" target="_blank">
+                      <img
+                        class="card-img-top rounded-top"
+                        src="../../assets/jam.jpg"
+                        alt="Jam"
+                      />
+                    </a>
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Jam</h5>
+                      <p class="card-text text-muted small">
+                        A stunning waterfall in Calintaan.
+                      </p>
+                      <div class="card-prices">
+                        <span class="badge bg-success">₱120.00</span>
+                      </div>
+                      <br />
+                      <button class="btn btn-warning mt-3 btn-sm w-100">
+                        Add to Wishlist
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Flavored Milk Card -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="card h-100 shadow-sm border-0">
+                    <a href="../../assets/hero-section-7.png" target="_blank">
+                      <img
+                        class="card-img-top rounded-top"
+                        src="../../assets/flavored milk.jpg"
+                        alt="Flavored Milk"
+                      />
+                    </a>
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Flavored Milk</h5>
+                      <p class="card-text text-muted small">
+                        Short description for Flavored Milk.
+                      </p>
+                      <div class="card-prices">
+                        <span class="badge bg-success">₱50.00</span>
+                      </div>
+                      <br />
+                      <button class="btn btn-warning mt-3 btn-sm w-100">
+                        Add to Wishlist
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Fresh Milk Card -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="card h-100 shadow-sm border-0">
+                    <a href="../../assets/fresh milk.jpg" target="_blank">
+                      <img
+                        class="card-img-top rounded-top"
+                        src="../../assets/fresh milk.jpg"
+                        alt="Fresh Milk"
+                      />
+                    </a>
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Fresh Milk</h5>
+                      <p class="card-text text-muted small">
+                        Short description for Fresh Milk.
+                      </p>
+                      <div class="card-prices">
+                        <span class="badge bg-success">₱120.00</span>
+                      </div>
+                      <br />
+                      <button class="btn btn-warning mt-3 btn-sm w-100">
+                        Add to Wishlist
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Beads Card -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="card h-100 shadow-sm border-0">
+                    <a href="../../assets/hero-section-9.png" target="_blank">
+                      <img
+                        class="card-img-top rounded-top"
+                        src=""
+                        alt="Beads"
+                      />
+                    </a>
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Beads</h5>
+                      <p class="card-text text-muted small">
+                        Short description for Beads.
+                      </p>
+                      <div class="card-prices">
+                        <span class="badge bg-success">₱120.00</span>
+                      </div>
+                      <button class="btn btn-warning mt-3 btn-sm w-100">
+                        Add to Wishlist
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- T-Shirts Card -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="card h-100 shadow-sm border-0">
+                    <a href="../../assets/hero-section-10.png" target="_blank">
+                      <img
+                        class="card-img-top rounded-top"
+                        src=""
+                        alt="T-Shirts"
+                      />
+                    </a>
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">T-Shirts</h5>
+                      <p class="card-text text-muted small">
+                        Short description for T-Shirts.
+                      </p>
+                      <div class="card-prices">
+                        <span class="badge bg-success">₱200.00</span>
+                      </div>
+                      <button class="btn btn-warning mt-3 btn-sm w-100">
+                        Add to Wishlist
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Mugs Card -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="card h-100 shadow-sm border-0">
+                    <a href="../../assets/hero-section-11.png" target="_blank">
+                      <img class="card-img-top rounded-top" src="" alt="Mugs" />
+                    </a>
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Mugs</h5>
+                      <p class="card-text text-muted small">
+                        Short description for Mugs.
+                      </p>
+                      <div class="card-prices">
+                        <span class="badge bg-success">₱150.00</span>
+                      </div>
+                      <button class="btn btn-warning mt-3 btn-sm w-100">
+                        Add to Wishlist
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Gifts Card -->
+                <div class="col-md-4 col-lg-3">
+                  <div class="card h-100 shadow-sm border-0">
+                    <a href="../../assets/hero-section-12.png" target="_blank">
+                      <img
+                        class="card-img-top rounded-top"
+                        src=""
+                        alt="Gifts"
+                      />
+                    </a>
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Gifts</h5>
+                      <p class="card-text text-muted small">
+                        Short description for Gifts.
+                      </p>
+                      <div class="card-prices">
+                        <span class="badge bg-success">₱3,250.00</span>
+                      </div>
+                      <button class="btn btn-warning mt-3 btn-sm w-100">
+                        Add to Wishlist
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6 py-9 py-xl-5 py-xxl-7">
+                <h1 class="display-3 text-1000 fw-normal">Let’s make a tour</h1>
+                <h1 class="display-3 text-success fw-bold">
+                  Discover the beauty
+                </h1>
+                <br />
+                <br />
+              </div>
+              <div class="col-lg-6">
+                <img
+                  src="../../assets/hero-section-1.png"
+                  alt="Tour Image"
+                  class="img-fluid rounded"
+                />
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+          <section class="py-0 overflow-hidden">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-4 col-lg-2 px-2">
+                  <div class="card">
+                    <a href="../../assets/hero-section-2.png" target="_blank">
+                      <img
+                        class="card-img-top hero-image"
+                        src="../../assets/hero-section-2.png"
+                        alt="..."
+                      />
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">Municipality Of Calintaan</h5>
+                      <p class="card-text">
+                        A tranquil town in Occidental Mindoro, Calintaan offers
+                        breathtaking views and serene surroundings a peaceful
+                        escape for nature lovers and adventurers.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-lg-2 px-2">
+                  <div class="card">
+                    <a href="../../assets/bato-tabao.JPG" target="_blank">
+                      <img
+                        class="card-img-top hero-image"
+                        src="../../assets/bato-tabao.JPG"
+                        alt="..."
+                      />+
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">Bato tabao</h5>
+                      <br />
+                      <p class="card-text">
+                        A majestic rock formation in the middle of the sea, Bato
+                        Tabao offers breathtaking views and tranquil sur
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-lg-2 px-2">
+                  <div class="card">
+                    <a href="../../assets/luli.jpg" target="_blank">
+                      <img
+                        class="card-img-top hero-image"
+                        src="../../assets/luli.jpg"
+                        alt="..."
+                      />
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">luli Island</h5>
+                      <p class="card-text">
+                        <br />
+                        A picturesque sandbar in Calintaan, Luli Island offers
+                        breathtaking views and serene surroundings—a peaceful
+                        escape for nature lovers and beach enthusiasts.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-lg-2 px-2">
+                  <div class="card">
+                    <a href="../../assets/makatiklas.jpg" target="_blank">
+                      <img
+                        class="card-img-top hero-image"
+                        src="../../assets/makatiklas.jpg"
+                        alt="..."
+                      />
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">Makatiklas Falls</h5>
+                      <p class="card-text">
+                        <br />
+                        A hidden gem in Calintaan, Makatiklas Falls offers
+                        breathtaking views and serene surroundings—a peaceful
+                        escape for nature lovers and adventurers.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-lg-2 px-2">
+                  <div class="card">
+                    <a href="../../assets/Mt. Iglit.jpg" target="_blank">
+                      <img
+                        class="card-img-top hero-image"
+                        src="../../assets/Mt. Iglit.jpg"
+                        alt="..."
+                      />
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">Mount Iglit</h5>
+                      <p class="card-text">
+                        <br />
+                        A majestic peak in Occidental Mindoro, Mount Iglit
+                        offers breathtaking views and serene surroundings—a
+                        peaceful escape for nature lovers and trekkers.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-lg-2 px-2">
+                  <div class="card">
+                    <a href="../../assets/Salugsog falls.JPG" target="_blank">
+                      <img
+                        class="card-img-top hero-image"
+                        src="../../assets/Salugsog falls.JPG"
+                        alt="..."
+                      />
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">Salugsog Falls</h5>
+                      <br />
+                      <p class="card-text">
+                        A stunning waterfall in Calintaan, Salugsog Falls offers
+                        breathtaking views and tranquil surroundings—a serene
+                        escape for nature lovers and adventurers.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <br />
+                <br />
+                <!-- Additional 6 image cards -->
+                <div class="col-md-4 col-lg-2 px-2">
+                  <div class="card">
+                    <a href="../../assets/hero-section-7.png" target="_blank">
+                      <img
+                        class="card-img-top hero-image"
+                        src="../../assets/hero-section-7.png"
+                        alt="..."
+                      />
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">Mangrove</h5>
+                      <p class="card-text">Short description 7.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-lg-2 px-2">
+                  <div class="card">
+                    <a href="../../assets/hero-section-8.png" target="_blank">
+                      <img
+                        class="card-img-top hero-image"
+                        src="../../assets/hero-section-8.png"
+                        alt="..."
+                      />
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">Green Hills</h5>
+                      <p class="card-text">Short description 8.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-lg-2 px-2">
+                  <div class="card">
+                    <a href="../../assets/hero-section-9.png" target="_blank">
+                      <img
+                        class="card-img-top hero-image"
+                        src="../../assets/hero-section-9.png"
+                        alt="..."
+                      />
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">Catholic CHurch</h5>
+                      <p class="card-text">Short description 9.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-lg-2 px-2">
+                  <div class="card">
+                    <a href="../../assets/hero-section-10.png" target="_blank">
+                      <img
+                        class="card-img-top hero-image"
+                        src="../../assets/hero-section-10.png"
+                        alt="..."
+                      />
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">Title 10</h5>
+                      <p class="card-text">Short description 10.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-lg-2 px-2">
+                  <div class="card">
+                    <a href="../../assets/hero-section-11.png" target="_blank">
+                      <img
+                        class="card-img-top hero-image"
+                        src="../../assets/hero-section-11.png"
+                        alt="..."
+                      />
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">Title 11</h5>
+                      <p class="card-text">Short description 11.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-lg-2 px-2">
+                  <div class="card">
+                    <a href="../../assets/hero-section-12.png" target="_blank">
+                      <img
+                        class="card-img-top hero-image"
+                        src="../../assets/hero-section-12.png"
+                        alt="..."
+                      />
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">Title 12</h5>
+                      <p class="card-text">Short description 12.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </div>
   </div>
-  <h1 class="explore-title">sample random pictures</h1>
-  <!-- Add a row with 6 images -->
-  <div class="event-images-container text-center mt-5">
-    <div class="row justify-content-center">
-      <div class="col-lg-2 col-md-2 col-sm-4 mb-3">
-        <img
-          src="../../assets/miss tourism.JPG"
-          alt="Event 1"
-          class="event-image"
-        />
-      </div>
-      <div class="col-lg-2 col-md-2 col-sm-4 mb-3">
-        <img
-          src="../../assets/miss tourism.JPG"
-          alt="Event 2"
-          class="event-image"
-        />
-      </div>
-      <div class="col-lg-2 col-md-2 col-sm-4 mb-3">
-        <img
-          src="../../assets/miss tourism.JPG"
-          alt="Event 3"
-          class="event-image"
-        />
-      </div>
-      <div class="col-lg-2 col-md-2 col-sm-4 mb-3">
-        <img
-          src="../../assets/miss tourism.JPG"
-          alt="Event 4"
-          class="event-image"
-        />
-      </div>
-      <div class="col-lg-2 col-md-2 col-sm-4 mb-3">
-        <img
-          src="../../assets/miss tourism.JPG"
-          alt="Event 5"
-          class="event-image"
-        />
-      </div>
-      <div class="col-lg-2 col-md-2 col-sm-4 mb-3">
-        <img
-          src="../../assets/miss tourism.JPG"
-          alt="Event 6"
-          class="event-image"
-        />
-      </div>
-    </div>
-  </div>
-
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <h1 class="explore-title">Our products</h1>
-  <section class="py-4 bg-light">
-    <div class="container">
-      <div class="row gy-4">
-        <!-- Turmeric Brew Card -->
-        <div class="col-md-4 col-lg-3">
-          <div class="card h-100 shadow-sm border-0">
-            <a href="../../assets/hero-section-2.png" target="_blank">
-              <img
-                class="card-img-top rounded-top"
-                src=""
-                alt="Turmeric Brew"
-              />
-            </a>
-            <div class="card-body text-center">
-              <h5 class="card-title fw-bold">Turmeric Brew</h5>
-              <p class="card-text text-muted small">
-                A healthy and aromatic beverage with a warm, earthy flavor.
-              </p>
-              <div class="card-prices">
-                <span class="badge bg-success me-2">300g: ₱180.00</span>
-                <span class="badge bg-success">200g: ₱140.00</span>
-              </div>
-              <button class="btn btn-warning mt-3 btn-sm w-100">
-                Add to Wishlist
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Ginger Brew Card -->
-        <div class="col-md-4 col-lg-3">
-          <div class="card h-100 shadow-sm border-0">
-            <a href="../../assets/tabao.JPG" target="_blank">
-              <img class="card-img-top rounded-top" src="" alt="Ginger Brew" />
-            </a>
-            <div class="card-body text-center">
-              <h5 class="card-title fw-bold">Ginger Brew</h5>
-              <p class="card-text text-muted small">
-                A warm, zesty beverage for wellness enthusiasts.
-              </p>
-              <div class="card-prices">
-                <span class="badge bg-success me-2">300g: ₱180.00</span>
-                <span class="badge bg-success">200g: ₱140.00</span>
-              </div>
-              <button class="btn btn-warning mt-3 btn-sm w-100">
-                Add to Wishlist
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Pure Ginger Card -->
-        <div class="col-md-4 col-lg-3">
-          <div class="card h-100 shadow-sm border-0">
-            <a href="../../assets/pure ginger.jpg" target="_blank">
-              <img class="card-img-top rounded-top" src="" alt="Pure Ginger" />
-            </a>
-            <div class="card-body text-center">
-              <h5 class="card-title fw-bold">Pure Ginger</h5>
-              <p class="card-text text-muted small">
-                A healthy and aromatic spice offering a warm, zesty flavor.
-              </p>
-              <div class="card-prices">
-                <span class="badge bg-success">₱140.00</span>
-              </div>
-              <button class="btn btn-warning mt-3 btn-sm w-100">
-                Add to Wishlist
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Masini Wine Card -->
-        <div class="col-md-4 col-lg-3">
-          <div class="card h-100 shadow-sm border-0">
-            <a href="../../assets/makatiklas.jpg" target="_blank">
-              <img class="card-img-top rounded-top" src="" alt="Masini Wine" />
-            </a>
-            <div class="card-body text-center">
-              <h5 class="card-title fw-bold">Masini Wine</h5>
-              <p class="card-text text-muted small">
-                A hidden gem in Calintaan.
-              </p>
-              <div class="card-prices">
-                <span class="badge bg-success me-2">750ml: ₱600.00</span>
-                <span class="badge bg-success">375ml: ₱375.00</span>
-              </div>
-              <button class="btn btn-warning mt-3 btn-sm w-100">
-                Add to Wishlist
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Pastilias Card -->
-        <div class="col-md-4 col-lg-3">
-          <div class="card h-100 shadow-sm border-0">
-            <a href="../../assets/pastilias.jpg" target="_blank">
-              <img
-                class="card-img-top rounded-top"
-                src="../../assets/pastilias.jpg"
-                alt="Pastilias"
-              />
-            </a>
-            <div class="card-body text-center">
-              <h5 class="card-title fw-bold">Pastilias</h5>
-              <p class="card-text text-muted small">Products of jam.</p>
-              <div class="card-prices">
-                <span class="badge bg-success">₱120.00</span>
-              </div>
-              <button class="btn btn-successmt-3 btn-sm w-100">see more</button>
-              <button class="btn btn-warning mt-3 btn-sm w-100">
-                Add to Wishlist
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Jam Card -->
-        <div class="col-md-4 col-lg-3">
-          <div class="card h-100 shadow-sm border-0">
-            <a href="../../assets/jam.jpg" target="_blank">
-              <img
-                class="card-img-top rounded-top"
-                src="../../assets/jam.jpg"
-                alt="Jam"
-              />
-            </a>
-            <div class="card-body text-center">
-              <h5 class="card-title fw-bold">Jam</h5>
-              <p class="card-text text-muted small">
-                A stunning waterfall in Calintaan.
-              </p>
-              <div class="card-prices">
-                <span class="badge bg-success">₱120.00</span>
-              </div>
-              <br />
-              <button class="btn btn-warning mt-3 btn-sm w-100">
-                Add to Wishlist
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Flavored Milk Card -->
-        <div class="col-md-4 col-lg-3">
-          <div class="card h-100 shadow-sm border-0">
-            <a href="../../assets/hero-section-7.png" target="_blank">
-              <img
-                class="card-img-top rounded-top"
-                src="../../assets/flavored milk.jpg"
-                alt="Flavored Milk"
-              />
-            </a>
-            <div class="card-body text-center">
-              <h5 class="card-title fw-bold">Flavored Milk</h5>
-              <p class="card-text text-muted small">
-                Short description for Flavored Milk.
-              </p>
-              <div class="card-prices">
-                <span class="badge bg-success">₱50.00</span>
-              </div>
-              <br />
-              <button class="btn btn-warning mt-3 btn-sm w-100">
-                Add to Wishlist
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Fresh Milk Card -->
-        <div class="col-md-4 col-lg-3">
-          <div class="card h-100 shadow-sm border-0">
-            <a href="../../assets/fresh milk.jpg" target="_blank">
-              <img
-                class="card-img-top rounded-top"
-                src="../../assets/fresh milk.jpg"
-                alt="Fresh Milk"
-              />
-            </a>
-            <div class="card-body text-center">
-              <h5 class="card-title fw-bold">Fresh Milk</h5>
-              <p class="card-text text-muted small">
-                Short description for Fresh Milk.
-              </p>
-              <div class="card-prices">
-                <span class="badge bg-success">₱120.00</span>
-              </div>
-              <br />
-              <button class="btn btn-warning mt-3 btn-sm w-100">
-                Add to Wishlist
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Beads Card -->
-        <div class="col-md-4 col-lg-3">
-          <div class="card h-100 shadow-sm border-0">
-            <a href="../../assets/hero-section-9.png" target="_blank">
-              <img class="card-img-top rounded-top" src="" alt="Beads" />
-            </a>
-            <div class="card-body text-center">
-              <h5 class="card-title fw-bold">Beads</h5>
-              <p class="card-text text-muted small">
-                Short description for Beads.
-              </p>
-              <div class="card-prices">
-                <span class="badge bg-success">₱120.00</span>
-              </div>
-              <button class="btn btn-warning mt-3 btn-sm w-100">
-                Add to Wishlist
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- T-Shirts Card -->
-        <div class="col-md-4 col-lg-3">
-          <div class="card h-100 shadow-sm border-0">
-            <a href="../../assets/hero-section-10.png" target="_blank">
-              <img class="card-img-top rounded-top" src="" alt="T-Shirts" />
-            </a>
-            <div class="card-body text-center">
-              <h5 class="card-title fw-bold">T-Shirts</h5>
-              <p class="card-text text-muted small">
-                Short description for T-Shirts.
-              </p>
-              <div class="card-prices">
-                <span class="badge bg-success">₱200.00</span>
-              </div>
-              <button class="btn btn-warning mt-3 btn-sm w-100">
-                Add to Wishlist
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Mugs Card -->
-        <div class="col-md-4 col-lg-3">
-          <div class="card h-100 shadow-sm border-0">
-            <a href="../../assets/hero-section-11.png" target="_blank">
-              <img class="card-img-top rounded-top" src="" alt="Mugs" />
-            </a>
-            <div class="card-body text-center">
-              <h5 class="card-title fw-bold">Mugs</h5>
-              <p class="card-text text-muted small">
-                Short description for Mugs.
-              </p>
-              <div class="card-prices">
-                <span class="badge bg-success">₱150.00</span>
-              </div>
-              <button class="btn btn-warning mt-3 btn-sm w-100">
-                Add to Wishlist
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Gifts Card -->
-        <div class="col-md-4 col-lg-3">
-          <div class="card h-100 shadow-sm border-0">
-            <a href="../../assets/hero-section-12.png" target="_blank">
-              <img class="card-img-top rounded-top" src="" alt="Gifts" />
-            </a>
-            <div class="card-body text-center">
-              <h5 class="card-title fw-bold">Gifts</h5>
-              <p class="card-text text-muted small">
-                Short description for Gifts.
-              </p>
-              <div class="card-prices">
-                <span class="badge bg-success">₱3,250.00</span>
-              </div>
-              <button class="btn btn-warning mt-3 btn-sm w-100">
-                Add to Wishlist
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6 py-9 py-xl-5 py-xxl-7">
-        <h1 class="display-3 text-1000 fw-normal">Let’s make a tour</h1>
-        <h1 class="display-3 text-success fw-bold">Discover the beauty</h1>
-        <br />
-        <br />
-      </div>
-      <div class="col-lg-6">
-        <img
-          src="../../assets/hero-section-1.png"
-          alt="Tour Image"
-          class="img-fluid rounded"
-        />
-      </div>
-    </div>
-  </div>
-  <br />
-  <br />
-  <section class="py-0 overflow-hidden">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-4 col-lg-2 px-2">
-          <div class="card">
-            <a href="../../assets/hero-section-2.png" target="_blank">
-              <img
-                class="card-img-top hero-image"
-                src="../../assets/hero-section-2.png"
-                alt="..."
-              />
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">Municipality Of Calintaan</h5>
-              <p class="card-text">
-                A tranquil town in Occidental Mindoro, Calintaan offers
-                breathtaking views and serene surroundings a peaceful escape for
-                nature lovers and adventurers.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-2 px-2">
-          <div class="card">
-            <a href="../../assets/bato-tabao.JPG" target="_blank">
-              <img
-                class="card-img-top hero-image"
-                src="../../assets/bato-tabao.JPG"
-                alt="..."
-              />+ 
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">Bato tabao</h5> 
-              <br />
-              <p class="card-text">
-                A majestic rock formation in the middle of the sea, Bato Tabao
-                offers breathtaking views and tranquil sur
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-2 px-2">
-          <div class="card">
-            <a href="../../assets/luli.jpg" target="_blank">
-              <img
-                class="card-img-top hero-image"
-                src="../../assets/luli.jpg"
-                alt="..."
-              />
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">luli Island</h5>
-              <p class="card-text">
-                <br />
-                A picturesque sandbar in Calintaan, Luli Island offers
-                breathtaking views and serene surroundings—a peaceful escape for
-                nature lovers and beach enthusiasts.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-2 px-2">
-          <div class="card">
-            <a href="../../assets/makatiklas.jpg" target="_blank">
-              <img
-                class="card-img-top hero-image"
-                src="../../assets/makatiklas.jpg"
-                alt="..."
-              />
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">Makatiklas Falls</h5>
-              <p class="card-text">
-                <br />
-                A hidden gem in Calintaan, Makatiklas Falls offers breathtaking
-                views and serene surroundings—a peaceful escape for nature
-                lovers and adventurers.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-2 px-2">
-          <div class="card">
-            <a href="../../assets/Mt. Iglit.jpg" target="_blank">
-              <img
-                class="card-img-top hero-image"
-                src="../../assets/Mt. Iglit.jpg"
-                alt="..."
-              />
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">Mount Iglit</h5>
-              <p class="card-text">
-                <br />
-                A majestic peak in Occidental Mindoro, Mount Iglit offers
-                breathtaking views and serene surroundings—a peaceful escape for
-                nature lovers and trekkers.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-2 px-2">
-          <div class="card">
-            <a href="../../assets/Salugsog falls.JPG" target="_blank">
-              <img
-                class="card-img-top hero-image"
-                src="../../assets/Salugsog falls.JPG"
-                alt="..."
-              />
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">Salugsog Falls</h5>
-              <br />
-              <p class="card-text">
-                A stunning waterfall in Calintaan, Salugsog Falls offers
-                breathtaking views and tranquil surroundings—a serene escape for
-                nature lovers and adventurers.
-              </p>
-            </div>
-          </div>
-        </div>
-        <br />
-        <br />
-        <!-- Additional 6 image cards -->
-        <div class="col-md-4 col-lg-2 px-2">
-          <div class="card">
-            <a href="../../assets/hero-section-7.png" target="_blank">
-              <img
-                class="card-img-top hero-image"
-                src="../../assets/hero-section-7.png"
-                alt="..."
-              />
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">Mangrove</h5>
-              <p class="card-text">Short description 7.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-2 px-2">
-          <div class="card">
-            <a href="../../assets/hero-section-8.png" target="_blank">
-              <img
-                class="card-img-top hero-image"
-                src="../../assets/hero-section-8.png"
-                alt="..."
-              />
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">Green Hills</h5>
-              <p class="card-text">Short description 8.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-2 px-2">
-          <div class="card">
-            <a href="../../assets/hero-section-9.png" target="_blank">
-              <img
-                class="card-img-top hero-image"
-                src="../../assets/hero-section-9.png"
-                alt="..."
-              />
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">Catholic CHurch</h5>
-              <p class="card-text">Short description 9.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-2 px-2">
-          <div class="card">
-            <a href="../../assets/hero-section-10.png" target="_blank">
-              <img
-                class="card-img-top hero-image"
-                src="../../assets/hero-section-10.png"
-                alt="..."
-              />
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">Title 10</h5>
-              <p class="card-text">Short description 10.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-2 px-2">
-          <div class="card">
-            <a href="../../assets/hero-section-11.png" target="_blank">
-              <img
-                class="card-img-top hero-image"
-                src="../../assets/hero-section-11.png"
-                alt="..."
-              />
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">Title 11</h5>
-              <p class="card-text">Short description 11.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-2 px-2">
-          <div class="card">
-            <a href="../../assets/hero-section-12.png" target="_blank">
-              <img
-                class="card-img-top hero-image"
-                src="../../assets/hero-section-12.png"
-                alt="..."
-              />
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">Title 12</h5>
-              <p class="card-text">Short description 12.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 </div>

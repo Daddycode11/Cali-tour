@@ -1,45 +1,277 @@
-<div *ngIf="products$ | async as products; else loading">
-  <div *ngIf="products.length; else noProducts">
-    <div class="product-list row gx-4 gy-4">
-      <div
-        class="product-card col-12 col-sm-6 col-md-4 col-lg-3"
-        *ngFor="let product of products"
-      >
-        <div class="card h-100 shadow-sm border-0 text-center">
-          <img
-            [src]="product.imageUrl"
-            [alt]="product.name"
-            class="product-image card-img-top img-fluid"
-          />
-          <div class="product-info card-body d-flex flex-column">
-            <h2 class="product-name h5 mb-2">{{ product.name }}</h2>
-            <p class="product-description text-muted mb-3">
-              {{ product.description }}
+<h1 class="explore-title">Our products</h1>
+<section class="py-4 bg-light">
+  <div class="container">
+    <div class="row gy-4">
+      <!-- Turmeric Brew Card -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+          <a href="../../assets/hero-section-2.png" target="_blank">
+            <img class="card-img-top rounded-top" src="" alt="Turmeric Brew" />
+          </a>
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Turmeric Brew</h5>
+            <p class="card-text text-muted small">
+              A healthy and aromatic beverage with a warm, earthy flavor.
             </p>
-            <div
-              class="mt-auto d-flex align-items-center justify-content-between"
-            >
-              <span class="product-price h6 text-success">
-                ₱{{ product.price }}
-              </span>
-              <button
-                class="btn btn-success btn-sm px-3"
-                (click)="addToCart(product)"
-              >
-                Add to Cart
-              </button>
+            <div class="card-prices">
+              <span class="badge bg-success me-2">300g: ₱180.00</span>
+              <span class="badge bg-success">200g: ₱140.00</span>
             </div>
+            <button class="btn btn-warning mt-3 btn-sm w-100">
+              Add to products
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ginger Brew Card -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+          <a href="../../assets/tabao.JPG" target="_blank">
+            <img class="card-img-top rounded-top" src="" alt="Ginger Brew" />
+          </a>
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Ginger Brew</h5>
+            <p class="card-text text-muted small">
+              A warm, zesty beverage for wellness enthusiasts.
+            </p>
+            <div class="card-prices">
+              <span class="badge bg-success me-2">300g: ₱180.00</span>
+              <span class="badge bg-success">200g: ₱140.00</span>
+            </div>
+            <button class="btn btn-warning mt-3 btn-sm w-100">
+              Add to products
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pure Ginger Card -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+          <a href="../../assets/pure ginger.jpg" target="_blank">
+            <img class="card-img-top rounded-top" src="" alt="Pure Ginger" />
+          </a>
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Pure Ginger</h5>
+            <p class="card-text text-muted small">
+              A healthy and aromatic spice offering a warm, zesty flavor.
+            </p>
+            <div class="card-prices">
+              <span class="badge bg-success">₱140.00</span>
+            </div>
+            <button class="btn btn-warning mt-3 btn-sm w-100">
+              Add to products
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Masini Wine Card -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+          <a href="../../assets/makatiklas.jpg" target="_blank">
+            <img class="card-img-top rounded-top" src="" alt="Masini Wine" />
+          </a>
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Masini Wine</h5>
+            <p class="card-text text-muted small">A hidden gem in Calintaan.</p>
+            <div class="card-prices">
+              <span class="badge bg-success me-2">750ml: ₱600.00</span>
+              <span class="badge bg-success">375ml: ₱375.00</span>
+            </div>
+            <button class="btn btn-warning mt-3 btn-sm w-100">
+              Add to products
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pastilias Card -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+          <a href="../../assets/pastilias.jpg" target="_blank">
+            <img
+              class="card-img-top rounded-top"
+              src="../../assets/pastilias.jpg"
+              alt="Pastilias"
+            />
+          </a>
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Pastilias</h5>
+            <p class="card-text text-muted small">Products of jam.</p>
+            <div class="card-prices">
+              <span class="badge bg-success">₱120.00</span>
+            </div>
+            <button class="btn btn-successmt-3 btn-sm w-100">see more</button>
+            <button class="btn btn-warning mt-3 btn-sm w-100">
+              Add to products
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jam Card -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+          <a href="../../assets/jam.jpg" target="_blank">
+            <img
+              class="card-img-top rounded-top"
+              src="../../assets/jam.jpg"
+              alt="Jam"
+            />
+          </a>
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Jam</h5>
+            <p class="card-text text-muted small">
+              A stunning waterfall in Calintaan.
+            </p>
+            <div class="card-prices">
+              <span class="badge bg-success">₱120.00</span>
+            </div>
+            <br />
+            <button class="btn btn-warning mt-3 btn-sm w-100">
+              Add to products
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flavored Milk Card -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+          <a href="../../assets/hero-section-7.png" target="_blank">
+            <img
+              class="card-img-top rounded-top"
+              src="../../assets/flavored milk.jpg"
+              alt="Flavored Milk"
+            />
+          </a>
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Flavored Milk</h5>
+            <p class="card-text text-muted small">
+              Short description for Flavored Milk.
+            </p>
+            <div class="card-prices">
+              <span class="badge bg-success">₱50.00</span>
+            </div>
+            <br />
+            <button class="btn btn-warning mt-3 btn-sm w-100">
+              Add to products
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fresh Milk Card -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+          <a href="../../assets/fresh milk.jpg" target="_blank">
+            <img
+              class="card-img-top rounded-top"
+              src="../../assets/fresh milk.jpg"
+              alt="Fresh Milk"
+            />
+          </a>
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Fresh Milk</h5>
+            <p class="card-text text-muted small">
+              Short description for Fresh Milk.
+            </p>
+            <div class="card-prices">
+              <span class="badge bg-success">₱120.00</span>
+            </div>
+            <br />
+            <button class="btn btn-warning mt-3 btn-sm w-100">
+              Add to products
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beads Card -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+          <a href="../../assets/hero-section-9.png" target="_blank">
+            <img class="card-img-top rounded-top" src="" alt="Beads" />
+          </a>
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Beads</h5>
+            <p class="card-text text-muted small">
+              Short description for Beads.
+            </p>
+            <div class="card-prices">
+              <span class="badge bg-success">₱120.00</span>
+            </div>
+            <button class="btn btn-warning mt-3 btn-sm w-100">
+              Add to products
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- T-Shirts Card -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+          <a href="../../assets/hero-section-10.png" target="_blank">
+            <img class="card-img-top rounded-top" src="" alt="T-Shirts" />
+          </a>
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">T-Shirts</h5>
+            <p class="card-text text-muted small">
+              Short description for T-Shirts.
+            </p>
+            <div class="card-prices">
+              <span class="badge bg-success">₱200.00</span>
+            </div>
+            <button class="btn btn-warning mt-3 btn-sm w-100">
+              Add to products
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mugs Card -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+          <a href="../../assets/hero-section-11.png" target="_blank">
+            <img class="card-img-top rounded-top" src="" alt="Mugs" />
+          </a>
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Mugs</h5>
+            <p class="card-text text-muted small">
+              Short description for Mugs.
+            </p>
+            <div class="card-prices">
+              <span class="badge bg-success">₱150.00</span>
+            </div>
+            <button class="btn btn-warning mt-3 btn-sm w-100">
+              Add to products
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gifts Card -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+          <a href="../../assets/hero-section-12.png" target="_blank">
+            <img class="card-img-top rounded-top" src="" alt="Gifts" />
+          </a>
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Gifts</h5>
+            <p class="card-text text-muted small">
+              Short description for Gifts.
+            </p>
+            <div class="card-prices">
+              <span class="badge bg-success">₱3,250.00</span>
+            </div>
+            <button class="btn btn-warning mt-3 btn-sm w-100">
+              Add to products
+            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-
-<ng-template #loading>
-  <p>Loading products...</p>
-</ng-template>
-
-<ng-template #noProducts>
-  <p>No products available.</p>
-</ng-template>
+</section>
